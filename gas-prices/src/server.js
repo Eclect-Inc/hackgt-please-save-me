@@ -3,7 +3,8 @@ import cors from "cors";
 import logger from "morgan";
 import bodyParser from "body-parser";
 import express from "express";
-
+const vision = require('@google-cloud/vision');
+const client = new vision.ImageAnnotatorClient();
 // import route from "./route";
 import imp from "./imp";
 
@@ -23,3 +24,4 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
 
+export default client
