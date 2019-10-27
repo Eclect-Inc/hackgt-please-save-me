@@ -13,7 +13,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
   background: #0F2027;  /* fallback for old browsers */
@@ -30,4 +30,11 @@
   height: 95vh;
   margin-left: 20vh;
   margin-right: 20vh;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }

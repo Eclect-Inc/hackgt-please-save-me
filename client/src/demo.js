@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Phone from './phone.png';
 import './App.css';
 
