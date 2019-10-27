@@ -36,45 +36,46 @@ def getTransactions(hostUserId, accountId):
     response = requests.request("GET", transactionUrl, headers = headers, params = queryString)
     return response
 
-def getRecipients(hostUserId):
-    queryString = {
-        "hostUserId": hostUserId,
-    }
-    response = requests.request("GET", recipientUrl, headers = headers, params = queryString)
-    return response
-
-def getRecipient(hostUserId, recipientId):
-    queryString = {
-        "hostUserId": hostUserId,
-    }
-    response = requests.request("GET", recipientUrl + "/" + recipientId, headers = headers, params = queryString)
-    return response
-
-# def createTransfer(fromAccountHolderId, fromAccountId, toAccountId, amount):
-#     body = {
-#         "fromAccountHolderId": fromAccountHolderId,
-#         "fromAccountId": fromAccountId,
-#         "toAccountId": toAccountId,
-#         "amount": {
-#             "amount": amount
-#         }
+# def getRecipients(hostUserId):
+#     queryString = {
+#         "hostUserId": hostUserId,
 #     }
-#     print(body)
+#     response = requests.request("GET", recipientUrl, headers = headers, params = queryString)
+#     return response
+
+# def getRecipient(hostUserId, recipientId):
+#     queryString = {
+#         "hostUserId": hostUserId,
+#     }
+#     response = requests.request("GET", recipientUrl + "/" + recipientId, headers = headers, params = queryString)
+#     return response
+
+def createTransfer(fromAccountHolderId, fromAccountId, toAccountId, amount, memo):
+    body = {
+        "fromAccountHolderId": fromAccountHolderId,
+        "fromAccountId": fromAccountId,
+        "toAccountId": toAccountId,
+        "memo": memo,
+        "paymentOption": "DEFAULT",
+        "amount": {
+            "amount": amount
+        },
+    }
+    print(body)
 
 
 
 testAccountId = getCustomerAccounts("HACKATHONUSER037").json()["accounts"][0]["id"]
-testRecipientId = getRecipients("HACKATHONUSER037").json()["Recipients"][0]["id"]
-print(testRecipientId)
-print()
+# testRecipientId = getRecipients("HACKATHONUSER037").json()["Recipients"][0]["id"]
+# print(testRecipientId)
 print(getCustomerAccounts("HACKATHONUSER037").text)
 print()
 print(getAccount("HACKATHONUSER037", testAccountId).text)
 print()
 print(getTransactions("HACKATHONUSER037", testAccountId).text)
 print()
-print(getRecipients("HACKATHONUSER037").text)
-print()
-print(getRecipient("HACKATHONUSER037", testRecipientId).text)
-print()
-# print(createTransfer("24b369240a034da58e25aaff1a205508", "rf5ao6Qclwsth9OfOvUb-EeV1m2BfmTzUEALGLQ3ehU", "U1fgmemAI-KNjGpoZkKGnS1jNJZa_h222o9Dcmj9Yx0", 1.0))
+# print(getRecipients("HACKATHONUSER037").text)
+# print()
+# print(getRecipient("HACKATHONUSER037", testRecipientId).text)
+# print()
+print(createTransfer("24b369240a034da58e25aaff1a205508", "rf5ao6Qclwsth9OfOvUb-EeV1m2BfmTzUEALGLQ3ehU", "U1fgmemAI-KNjGpoZkKGnS1jNJZa_h222o9Dcmj9Yx0", 1.0))
