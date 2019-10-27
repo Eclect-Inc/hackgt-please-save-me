@@ -1,0 +1,3 @@
+[submodule "gas-api"]
+	path = gas-api
+	url = https://github.com/Eclect-Inc/gas-api.git/
