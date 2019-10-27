@@ -5,26 +5,35 @@ import { Input } from 'antd';
 import { Icon } from 'antd';
 import 'antd/dist/antd.css';
 import './App.css';
-import { white } from 'ansi-colors';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Demo />
-        <div className="input-panel">
-          <p>Improving Accessibility via SMS</p>
-          <div className="input">
-            <Input placeholder="Input message here." style={{marginRight: 10}}/>
-            <Button type="primary" shape="square" icon="double-right"/>
+export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "",
+    };
+  }
+  changeInput = (input) => {
+    this.setState({
+      value: this.state.value !== "" ? this.state.value.toString() + input : input
+    })
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Demo changeInput={this.changeInput}/>
+          <div className="input-panel">
+            <p>Improving Accessibility via SMS</p>
+            <div className="input">
+              <Input placeholder="Input message here." style={{marginRight: 10}} value={this.state.value}/>
+              <Button type="primary" shape="square" icon="double-right"/>
+            </div>
           </div>
-        </div>
-        <div style={{backgroundColor: white, height: 50, width: 50}}>
-
-        </div>
-      </header>
-    </div>
-  );
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;

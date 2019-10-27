@@ -13,7 +13,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
   background: #0F2027;  /* fallback for old browsers */
@@ -38,3 +38,57 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+
+.phonebutton {
+  position: absolute;
+  /* margin-top: 575px;
+  margin-left: 242px; */
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+
+/* #button1 {
+  margin-top: 529px;
+  margin-left: 179px;
+}
+#button2 {
+  margin-top: 529px;
+  margin-left: 234px;
+}
+#button3 {
+  margin-top: 529px;
+  margin-left:288px;
+}
+#button4 {
+  margin-top: 568px;
+  margin-left: 179px;
+}
+#button5 {
+  margin-top: 568px;
+  margin-left: 234px;
+}
+#button6 {
+  margin-top: 568px;
+  margin-left: 288px;
+}
+#button7 {
+  margin-top: 605px;
+  margin-left: 179px;
+}
+#button8 {
+  margin-top: 605px;
+  margin-left: 234px;
+}
+#button9 {
+  margin-top: 605px;
+  margin-left: 288px;
+}
+#button0 {
+  margin-top: 642px;
+  margin-left: 234px;
+}
+#buttonok {
+  margin-top: 456px;
+  margin-left: 231px;
+} */
