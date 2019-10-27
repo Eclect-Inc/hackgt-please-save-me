@@ -31,3 +31,54 @@
   margin-left: 20vh;
   margin-right: 20vh;
 }
+.phonebutton {
+  position: absolute;
+  /* margin-top: 575px;
+  margin-left: 242px; */
+  height: 35px;
+  border: none;
+}
+#button1 {
+  margin-top: 575px;
+  margin-left: 186px;
+}
+#button2 {
+  margin-top: 575px;
+  margin-left: 248px;
+}
+#button3 {
+  margin-top: 575px;
+  margin-left:312px;
+}
+#button4 {
+  margin-top: 618px;
+  margin-left: 186px;
+}
+#button5 {
+  margin-top: 618px;
+  margin-left: 248px;
+}
+#button6 {
+  margin-top: 618px;
+  margin-left: 312px;
+}
+#button7 {
+  margin-top: 660px;
+  margin-left: 186px;
+}
+#button8 {
+  margin-top: 660px;
+  margin-left: 248px;
+}
+#button9 {
+  margin-top: 660px;
+  margin-left: 312px;
+}
+#button10 {
+  margin-top: 702px;
+  margin-left: 248px;
+}
+#buttonok {
+  margin-top: 496px;
+  margin-left: 245px;
+}
